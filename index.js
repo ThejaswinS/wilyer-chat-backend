@@ -8,8 +8,8 @@ const io = require('socket.io')(server);
 
 app.use(cors());
 app.use(express.json());
-
-server.listen(5000, () =>console.log("starting at 5000 port"))
+const port =process.env.PORT ||5000;
+server.listen(port, () =>console.log("starting at 5000 port"))
 
 
 
